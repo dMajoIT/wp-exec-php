@@ -1,5 +1,5 @@
 # Exec-PHP Remodel
-WordPressプラグイン『Exec-PHP』の改造版
+WordPressプラグイン『[Exec-PHP](https://wordpress.org/plugins/exec-php/ "Exec-PHP")』の改造版
 ライセンス、著作権諸々は、作成者に準拠します。
 
 ## INSTALL
