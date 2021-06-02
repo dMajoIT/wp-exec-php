@@ -20,7 +20,7 @@ class ExecPhp_UserUi
 	// init
 	// ---------------------------------------------------------------------------
 
-	function ExecPhp_UserUi(&$cache)
+	function __construct(&$cache)
 	{
 		$this->m_cache =& $cache;
 

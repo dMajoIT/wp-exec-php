@@ -17,7 +17,7 @@ class ExecPhp_Script
 	var $m_path = NULL;
 	var $m_dependency = NULL;
 
-	function ExecPhp_Script($id, $tab_name, $l10n_tab, $path, $dependency)
+	function __construct($id, $tab_name, $l10n_tab, $path, $dependency)
 	{
 		$this->m_id =& $id;
 		$this->m_tab_name = $tab_name;

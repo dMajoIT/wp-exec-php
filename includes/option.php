@@ -26,7 +26,7 @@ class ExecPhp_Option
 	// init
 	// ---------------------------------------------------------------------------
 
-	function ExecPhp_Option()
+	function __construct()
 	{
 		$this->m_status = $this->upgrade();
 	}
@@ -65,6 +65,8 @@ class ExecPhp_Option
 				$old_version = '4.9';
 			} else if (version_compare($old_version, '4.10.dev') < 0) {
 				$old_version = '4.10';
+			} else if (version_compare($old_version, '4.10.dev Remodel') < 0) {
+				$old_version = '4.10.dev';
 			} else {
 				die('Exec-PHP: There is no upgrade path to your current Exec-PHP version. Please upload the plugin again or contact the author.');
 			}

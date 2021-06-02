@@ -23,7 +23,7 @@ class ExecPhp_WriteUi
 	// init
 	// ---------------------------------------------------------------------------
 
-	function ExecPhp_WriteUi(&$cache, &$script)
+	function __construct(&$cache, &$script)
 	{
 		$this->m_cache =& $cache;
 		$this->m_script =& $script;

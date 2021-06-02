@@ -18,7 +18,7 @@ class ExecPhp_Runtime
 	// init
 	// ---------------------------------------------------------------------------
 
-	function ExecPhp_Runtime(&$cache)
+	function __construct(&$cache)
 	{
 		$this->m_cache =& $cache;
 
@@ -40,7 +40,7 @@ class ExecPhp_Runtime
 		// to be compatible with older PHP4 installations
 		// don't use fancy ob_XXX shortcut functions
 		ob_start();
-		eval("?>$content<?php ");
+		@eval("?>$content<?php ");
 		$output = ob_get_contents();
 		ob_end_clean();
 		return $output;

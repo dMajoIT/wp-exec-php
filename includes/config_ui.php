@@ -27,7 +27,7 @@ class ExecPhp_ConfigUi
 	// ---------------------------------------------------------------------------
 
 	// Sets up the Exec-Php config menu
-	function ExecPhp_ConfigUi(&$cache, &$script)
+	function __construct(&$cache, &$script)
 	{
 		$this->m_cache =& $cache;
 		$this->m_script =& $script;

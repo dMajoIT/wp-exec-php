@@ -21,7 +21,7 @@ class ExecPhp_UserMeta
 	// init
 	// ---------------------------------------------------------------------------
 
-	function ExecPhp_UserMeta($user_id)
+	function __construct($user_id)
 	{
 		$this->m_user_id = $user_id;
 		$this->load();

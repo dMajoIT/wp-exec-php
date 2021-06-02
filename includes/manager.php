@@ -22,7 +22,7 @@ class ExecPhp_Manager
 	// init
 	// ---------------------------------------------------------------------------
 
-	function ExecPhp_Manager()
+	function __construct()
 	{
 		add_action('init', array(&$this, 'action_init'));
 	}
@@ -33,10 +33,10 @@ class ExecPhp_Manager
 
 	function action_init()
 	{
-		$cache =& new ExecPhp_Cache();
-		$this->m_ajax =& new ExecPhp_Ajax($cache);
-		$this->m_runtime =& new ExecPhp_Runtime($cache);
-		$this->m_admin =& new ExecPHP_Admin($cache);
+		$cache = new ExecPhp_Cache();
+		$this->m_ajax = new ExecPhp_Ajax($cache);
+		$this->m_runtime = new ExecPhp_Runtime($cache);
+		$this->m_admin = new ExecPHP_Admin($cache);
 	}
 }
 endif;

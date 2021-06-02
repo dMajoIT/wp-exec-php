@@ -17,9 +17,9 @@ class ExecPhp_Cache
 	// init
 	// ---------------------------------------------------------------------------
 
-	function ExecPhp_Cache()
+	function __construct()
 	{
-		$this->m_option =& new ExecPhp_Option();
+		$this->m_option = new ExecPhp_Option();
 	}
 
 	// ---------------------------------------------------------------------------
@@ -46,7 +46,7 @@ class ExecPhp_Cache
 		if (!isset($this->m_usermetas[$user_id]))
 			// this will generate warnings with error_reporting(E_STRICT) using PHP5
 			// see http://www.php.net/manual/en/language.references.whatdo.php
-			$this->m_usermetas[$user_id] =& new ExecPhp_UserMeta($user_id);
+			$this->m_usermetas[$user_id] = new ExecPhp_UserMeta($user_id);
 		return $this->m_usermetas[$user_id];
 	}
 }

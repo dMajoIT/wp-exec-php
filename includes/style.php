@@ -9,7 +9,7 @@ require_once(dirname(__FILE__).'/const.php');
 if (!class_exists('ExecPhp_Style')) :
 class ExecPhp_Style
 {
-	function ExecPhp_Style()
+	function __construct()
 	{
 		if (current_user_can(ExecPhp_CAPABILITY_EDIT_PLUGINS)
 			|| current_user_can(ExecPhp_CAPABILITY_EDIT_USERS))

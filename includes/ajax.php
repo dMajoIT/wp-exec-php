@@ -18,7 +18,7 @@ class ExecPhp_Ajax
 	// init
 	// ---------------------------------------------------------------------------
 
-	function ExecPhp_Ajax(&$cache)
+	function __construct(&$cache)
 	{
 		$this->m_cache =& $cache;
 
@@ -61,7 +61,7 @@ class ExecPhp_Ajax
 		$output_exec_php = '';
 		foreach ($s as $i)
 		{
-			$user =& new WP_User($i->user_id);
+			$user = new WP_User($i->user_id);
 			$has_switch_themes = $user->has_cap(ExecPhp_CAPABILITY_EXECUTE_WIDGETS);
 			$has_exec_php = $user->has_cap(ExecPhp_CAPABILITY_EXECUTE_ARTICLES);
 			$has_edit_others_posts = $user->has_cap(ExecPhp_CAPABILITY_EDIT_OTHERS_POSTS);
